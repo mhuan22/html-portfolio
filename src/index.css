@@ -483,57 +483,58 @@ h3 {
   font-size: clamp(1rem, 1.7vw, 1.14rem);
 }
 
-.contact-links {
+.contact-form {
   display: grid;
-  gap: 12px;
+  gap: 10px;
 }
 
-.contact-links a {
-  display: grid;
-  grid-template-columns: 44px minmax(0, 1fr);
-  gap: 14px;
-  align-items: center;
-  min-height: 68px;
+.contact-form label {
+  color: var(--text);
+  font-size: 0.92rem;
+  font-weight: 800;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 8px;
-  padding: 12px;
+  padding: 13px 14px;
   background: rgba(255, 255, 255, 0.055);
+  color: var(--text);
+  font: inherit;
   transition:
     border-color 180ms ease,
     background 180ms ease,
-    transform 180ms ease;
+    box-shadow 180ms ease;
 }
 
-.contact-links a:hover {
+.contact-form input:hover,
+.contact-form textarea:hover {
   border-color: rgba(255, 200, 87, 0.5);
-  background: rgba(255, 200, 87, 0.1);
-  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.08);
 }
 
-.contact-links svg {
-  width: 44px;
-  height: 44px;
-  border-radius: 8px;
-  padding: 12px;
-  background: #f7f4ec;
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: rgba(124, 230, 195, 0.78);
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(124, 230, 195, 0.12);
 }
 
-.contact-links span {
-  display: grid;
-  gap: 2px;
-  min-width: 0;
+.contact-form textarea {
+  min-height: 150px;
+  resize: vertical;
 }
 
-.contact-links strong {
-  color: var(--text);
+.contact-form button {
+  margin-top: 6px;
+  cursor: pointer;
 }
 
-.contact-links small {
-  overflow: hidden;
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
   color: var(--muted);
-  font-size: 0.9rem;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
 @media (max-width: 900px) {
@@ -625,8 +626,8 @@ h3 {
     padding: 20px;
   }
 
-  .contact-links small {
-    white-space: normal;
+  .contact-form button {
+    width: 100%;
   }
 }
 
