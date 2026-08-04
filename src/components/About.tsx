@@ -9,7 +9,6 @@ function About() {
     <section className="content-section about-section" id="about">
       <div className="section-heading">
         <p className="eyebrow">About</p>
-        <h2>Focused on software that feels clear, useful, and human.</h2>
       </div>
 
       <div className="about-grid">

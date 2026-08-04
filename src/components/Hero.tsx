@@ -7,11 +7,6 @@ function Hero() {
         <p className="eyebrow">Computer Science at UBC</p>
         <h1>Hi, I'm Mingwei.</h1>
 
-        <p className="hero-intro">
-          I build thoughtful web experiences, accessible software, and practical
-          tools that turn complex ideas into useful products.
-        </p>
-
         <div className="hero-actions" aria-label="Primary links">
           <a className="button button-primary" href="#projects">
             View projects

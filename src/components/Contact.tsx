@@ -25,7 +25,7 @@ function Contact() {
     <section className="content-section contact-section" id="contact">
       <div className="section-heading">
         <p className="eyebrow">Contact</p>
-        <h2>Open to internships, co-op roles, and project collaborations.</h2>
+        <h2>Have any questions or want to collaborate? Send me a message and I'll get back to you as soon as possible</h2>
       </div>
 
       <div className="contact-panel">

@@ -51,7 +51,7 @@ function Projects() {
     <section className="content-section projects-section" id="projects">
       <div className="section-heading">
         <p className="eyebrow">Projects</p>
-        <h2>Selected work with product thinking and technical depth.</h2>
+        <h2>Check out any of my work</h2>
       </div>
 
       <div className="project-grid">

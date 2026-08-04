@@ -168,7 +168,7 @@ main {
 .eyebrow {
   margin: 0 0 12px;
   color: var(--mint);
-  font-size: 0.8rem;
+  font-size: 2rem;
   font-weight: 800;
   letter-spacing: 0;
   text-transform: uppercase;
@@ -202,13 +202,6 @@ h2 {
 
 h3 {
   font-size: 1.35rem;
-}
-
-.hero-intro {
-  max-width: 650px;
-  margin: 24px 0 0;
-  color: #ddd6cb;
-  font-size: clamp(1.06rem, 2vw, 1.32rem);
 }
 
 .hero-actions {
