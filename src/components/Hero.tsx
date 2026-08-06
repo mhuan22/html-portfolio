@@ -71,7 +71,7 @@ function Hero() {
       onPointerLeave={handlePointerLeave}
     >
       <div className="hero-copy">
-        <p className="eyebrow">Computer Science at UBC</p>
+        <p className="eyebrow">Vancouver-based Software Engineer</p>
         <h1>Hi, I'm Mingwei.</h1>
 
         <div className="hero-actions" aria-label="Primary links">

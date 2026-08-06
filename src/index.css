@@ -452,9 +452,8 @@ h3 {
 
 .about-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
+  grid-template-columns: 1fr;
   gap: 24px;
-  align-items: start;
 }
 
 .about-grid > p,
@@ -474,6 +473,7 @@ h3 {
 
 .focus-list {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 12px;
   margin: 0;
   padding: 0;
@@ -481,22 +481,34 @@ h3 {
 }
 
 .focus-list li {
+  display: flex;
+  min-height: 76px;
+  align-items: center;
+  gap: 12px;
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 8px;
-  padding: 16px 18px;
+  padding: 14px;
   background: rgba(255, 255, 255, 0.055);
   color: var(--text);
   font-weight: 750;
 }
 
-.focus-list li::before {
-  display: inline-block;
-  width: 9px;
-  height: 9px;
-  margin-right: 12px;
-  border-radius: 50%;
-  background: var(--gold);
-  content: "";
+.tech-logo-frame {
+  display: grid;
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.tech-logo {
+  display: block;
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
 }
 
 .project-grid {
