@@ -512,14 +512,26 @@ h3 {
 }
 
 .project-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  display: flex;
   gap: 18px;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  padding: 4px 2px 18px;
+  scroll-padding-inline: 2px;
+  scroll-snap-type: x proximity;
+  scrollbar-color: rgba(124, 230, 195, 0.58) rgba(255, 255, 255, 0.08);
+}
+
+.project-grid:focus-visible {
+  border-radius: 8px;
+  outline: 3px solid rgba(124, 230, 195, 0.8);
+  outline-offset: 6px;
 }
 
 .project-card {
   position: relative;
   display: flex;
+  flex: 0 0 clamp(280px, calc((100% - 36px) / 3), 360px);
   min-height: 430px;
   flex-direction: column;
   gap: 20px;
@@ -536,6 +548,7 @@ h3 {
     border-color 180ms ease,
     transform 180ms ease,
     background 180ms ease;
+  scroll-snap-align: start;
 }
 
 .project-card::before {
@@ -560,6 +573,34 @@ h3 {
   opacity: 1;
 }
 
+.project-card-clickable {
+  cursor: pointer;
+}
+
+.project-card-cover-link {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  border-radius: inherit;
+}
+
+.project-card-cover-link:focus-visible {
+  outline: 3px solid rgba(124, 230, 195, 0.8);
+  outline-offset: -6px;
+}
+
+.project-thumbnail {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  object-fit: cover;
+  object-position: center;
+}
+
 .project-card h3,
 .project-card p,
 .project-card ul,
@@ -570,14 +611,6 @@ h3 {
 .project-card p {
   margin: 12px 0 0;
   color: #ddd6cb;
-}
-
-.project-highlights {
-  display: grid;
-  gap: 10px;
-  margin: 0;
-  padding-left: 18px;
-  color: var(--muted);
 }
 
 .project-highlights li::marker {
@@ -710,12 +743,9 @@ h3 {
     min-height: 320px;
   }
 
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
-
   .project-card {
-    min-height: auto;
+    flex-basis: min(82vw, 360px);
+    min-height: 400px;
   }
 }
 
@@ -781,6 +811,11 @@ h3 {
   .about-grid > p,
   .contact-panel {
     padding: 20px;
+  }
+
+  .project-card {
+    flex-basis: min(86vw, 320px);
+    min-height: 380px;
   }
 
   .contact-form button {
