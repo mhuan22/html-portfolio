@@ -12,7 +12,7 @@ function Hero() {
     };
   }, []);
 
-  const updateParallax = (x: number, y: number) => {
+  const updateParallax = (x: number, y: number, updateGlow = true) => {
     const hero = heroRef.current;
 
     if (!hero) {
@@ -37,8 +37,11 @@ function Hero() {
       hero.style.setProperty("--hero-accent-inverse-y", `${(-y * 28).toFixed(2)}px`);
       hero.style.setProperty("--hero-tilt-x", `${(-y * 7).toFixed(2)}deg`);
       hero.style.setProperty("--hero-tilt-y", `${(x * 9).toFixed(2)}deg`);
-      hero.style.setProperty("--hero-glow-x", `${((x + 0.5) * 100).toFixed(2)}%`);
-      hero.style.setProperty("--hero-glow-y", `${((y + 0.5) * 100).toFixed(2)}%`);
+
+      if (updateGlow) {
+        hero.style.setProperty("--hero-glow-x", `${((x + 0.5) * 100).toFixed(2)}%`);
+        hero.style.setProperty("--hero-glow-y", `${((y + 0.5) * 100).toFixed(2)}%`);
+      }
     });
   };
 
@@ -59,7 +62,7 @@ function Hero() {
   };
 
   const handlePointerLeave = () => {
-    updateParallax(0, 0);
+    updateParallax(0, 0, false);
   };
 
   return (
