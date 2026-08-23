@@ -19,6 +19,8 @@
   --violet: #b48cff;
   --cursor-x: 50vw;
   --cursor-y: 12vh;
+  scrollbar-width: thin;
+  scrollbar-color: var(--mint);
 }
 
 * {

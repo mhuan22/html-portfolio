@@ -1,6 +1,7 @@
 import fitflexThumbnail from "../assets/fitflex-thumbnail.png";
 import micDropThumbnail from "../assets/mic-drop-thumbnail.png";
 import mindLiftThumbnail from "../assets/mind-lift-thumbnail.png";
+import movieBrowserThumbnail from "../assets/movie-browser-thumbnail.png"
 
 type Project = {
   title: string;
@@ -14,12 +15,21 @@ type Project = {
 
 const projects: Project[] = [
   {
+    title: "ReelView",
+    description:
+      "Simple movie browser with favouriting functionality using TMDB API.",
+    thumbnailSrc: movieBrowserThumbnail,
+    thumbnailAlt: "ReelView main page with movie list.",
+    tech: ["React", "JavaScript", "TMDB API"],
+    githubUrl: "https://github.com/mhuan22/Movie-Browser",
+    demoUrl: null,
+  },
+  {
     title: "Mic Drop",
     description:
       "Karaoke web app with synchronized lyrics and live microphone playback.",
     thumbnailSrc: micDropThumbnail,
-    thumbnailAlt: "Mic Drop landing screen with a chrome microphone and purple welcome text.",
-
+    thumbnailAlt: "Mic Drop landing screen.",
     tech: ["React", "TypeScript", "Python", "Flask", "Web Audio API"],
     githubUrl: "https://github.com/karentran28/MicDrop-BCSHacks-2025",
     demoUrl: null,
